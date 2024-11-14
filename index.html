@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja"> <!-- japanese -->
+    <head>
+        <title>ハトとパン</title>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="image/hato_fab.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <canvas id="canvas"></canvas>
+        <script src="function.js" defer></script>
+        <script src="game.js" defer></script> 
+
+        <div id="title" class="scene active">
+            <h1 id="hiscore_text"></h1>
+            <button id="hato_beans2" onclick="showScene('game_playing'); initGame()"><img src="image/title_game.jpg"></button>
+            <br>
+            <button id="hato_beans_rule" onclick="showScene('game_explain'); input_focus('back_title')"><img src="image/title_rule.png"></button>
+        </div>
+
+        <div id="game_playing" class="scene">
+
+        </div>
+
+        <div id="game_explain" class="scene">
+            <h1>あそびかた</h1>
+            <p>1.「ハト」を左右に動かして、弾を発射すること(攻撃)で、空からふってくるパンたちを倒しましょう。</p>
+            <p>2. 地面まで「パン」が落ちると、その地面が抜けます。抜けた部分へ進むことはできません。</p>
+            <p>3.「パン」が「ハト」に当たる・「パン」が発射した弾に当たるとGameOverです。</p>
+
+            <h2>キー操作</h2>
+            <p>方向キー: 選択肢を選ぶ、ハトの移動<br>
+                ENTERキー: 決定、次に進む<br>
+                spaceキー: （ハトの）弾の発射<br>
+                escキー: ゲーム内での一時停止<br>
+            </p>
+
+            <h2>パン紹介</h2>
+            <p>悪の手により魔改造されたパンたちは、ハトを倒すために奮闘します。</p>
+            <p>特別な能力を持っているパンを倒すと、いいことがあります</p>
+            <div class="container">
+                <div>メロンパン</div>
+                <div>フランスパン</div>
+                <div>クロワッサン</div>
+            </div>
+
+            <div class="container">
+                <div><img src="image/melon.png"></div>
+                <div><img src="image/france.png"></div>
+                <div><img src="image/kurowa.png"></div>
+            </div>
+
+            <p>パンやハトのイラストは自分自身で描いたので、ぜひ見てみてください</p>
+            <button id="back_title" onclick="showScene('title')">タイトルに戻る(ENTER)</button>
+        </div>
+        
+        </div>
+
+    </body>
+</html>

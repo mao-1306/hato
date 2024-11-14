@@ -1,0 +1,55 @@
+
+.scene{display:none;}
+.active{display:block;}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+body 
+{
+    background-color:black;
+    text-align:center;
+    font-family: 'ベストテンDOT', sans-serif;
+}  
+button
+{
+    z-index: 1;
+}
+
+#canvas
+{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    z-index: -1;
+    filter: none;
+}
+
+#hato_beans2
+{
+    position:absolute; 
+    top: 200px;
+    left: 450px;
+}
+
+#hato_beans_rule
+{
+    position:absolute; 
+    top: 500px;
+    left: 550px;
+}
+
+#hiscore_text
+{
+    position:absolute; 
+    top: 300px;
+    left: 600px;
+    z-index: 2;
+}
