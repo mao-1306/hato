@@ -6,7 +6,7 @@ let stime, etime, ptime;
 const gameState = {
     scene: 'title',
     score: 0,
-    hiscore: 5100,
+    hiscore: 0,
     // ポーズ
     pause_active : false,
     game_active : false,
